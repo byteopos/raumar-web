@@ -69,7 +69,7 @@ nav.menu{display:flex;gap:30px;font-size:.84rem;font-weight:500;letter-spacing:.
 nav.menu a{text-decoration:none;color:var(--muted);transition:color .2s}
 nav.menu a:hover{color:#B8935A}
 @media (max-width:980px){nav.menu{display:none}}
-@media (max-width:520px){header .btn{padding:12px 16px;font-size:.78rem}.logo .lg{height:42px}}
+@media (max-width:520px){.btn{white-space:normal;text-align:center}header .btn{white-space:nowrap;padding:12px 16px;font-size:.78rem}.logo .lg{height:42px}}
 
 /* hero */
 .hero{position:relative;min-height:min(86vh,760px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#3a2f2b}
@@ -118,13 +118,12 @@ section.sec{padding-block:110px}
 .price-box b{color:var(--ink);font-weight:500}
 
 /* gallery */
-.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:220px;gap:12px}
-.gallery figure{margin:0;overflow:hidden;background:var(--soft);position:relative}
+.gallery{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.gallery figure{margin:0;overflow:hidden;background:var(--soft);aspect-ratio:1/1}
 .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
-.gallery figure:hover img{transform:scale(1.06)}
-.gallery .tall{grid-row:span 2}
-.gallery .wide{grid-column:span 2}
-@media (max-width:860px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:180px}}
+.gallery figure:hover img{transform:scale(1.05)}
+@media (max-width:1000px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}}
 
 /* reviews */
 .reviews{background:var(--ink);color:#f3ece8}
@@ -251,12 +250,12 @@ footer .bottom{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);paddi
       </div>
       <div class="feat">
         <article>
-          <div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=900&q=70&auto=format&fit=crop" alt="Secado con cepillo redondo"></div>
+          <div class="ph"><img loading="lazy" src="img/color-cobrizo.jpg" alt="Color cobrizo con ondas"></div>
           <h3>Un salón a tu medida</h3>
           <p>Mujer, hombre y peques. Cada corte y cada color pensado para ti y para tu día a día.</p>
         </article>
         <article>
-          <div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1610992015762-45dca7fa3a85?w=900&q=70&auto=format&fit=crop" alt="Manicura en tono rosa claro"></div>
+          <div class="ph"><img loading="lazy" src="img/unas-rojo.jpg" alt="Manicura semipermanente en rojo"></div>
           <h3>Belleza de pies a cabeza</h3>
           <p>Manicura, pedicura, depilación duradera, cejas y faciales en nuestra cabina de estética, de la mano de Marta.</p>
         </article>
@@ -293,15 +292,19 @@ footer .bottom{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);paddi
       <div class="head">
         <span class="kicker">Galería</span>
         <h2>Inspírate</h2>
-        <p>Mira nuestros últimos trabajos de uñas, color y antes/después en Instagram.</p>
+        <p>Algunos de nuestros trabajos de uñas, color y peinado. Hay muchos más en Instagram.</p>
       </div>
       <div class="gallery">
-        <figure class="tall"><img loading="lazy" src="https://images.unsplash.com/photo-1774660810725-fb04e002003d?w=700&q=70&auto=format&fit=crop" alt="Recogido de peluquería"></figure>
-        <figure class="wide"><img loading="lazy" src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=1100&q=70&auto=format&fit=crop" alt="Clienta haciéndose la manicura"></figure>
-        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1560869713-7d0a29430803?w=600&q=70&auto=format&fit=crop" alt="Peinado con rizador"></figure>
-        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=70&auto=format&fit=crop" alt="Corte de hombre con secador"></figure>
-        <figure class="wide"><img loading="lazy" src="https://images.unsplash.com/photo-1589710751893-f9a6770ad71b?w=1100&q=70&auto=format&fit=crop" alt="Tratamiento de pestañas"></figure>
-        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=70&auto=format&fit=crop" alt="Uñas decoradas"></figure>
+        <figure><img loading="lazy" src="img/unas-colores.jpg" alt="Manicura de colores"></figure>
+        <figure><img loading="lazy" src="img/antes-despues-alisado.jpg" alt="Antes y después de un alisado"></figure>
+        <figure><img loading="lazy" src="img/color-cobrizo.jpg" alt="Color cobrizo con ondas"></figure>
+        <figure><img loading="lazy" src="img/unas-rojo.jpg" alt="Manicura semipermanente en rojo"></figure>
+        <figure><img loading="lazy" src="img/corte-corto.jpg" alt="Corte corto con color chocolate"></figure>
+        <figure><img loading="lazy" src="img/unas-pastel.jpg" alt="Uñas en tonos pastel"></figure>
+        <figure><img loading="lazy" src="img/ondas-castano.jpg" alt="Melena larga con ondas"></figure>
+        <figure><img loading="lazy" src="img/unas-francesa.jpg" alt="Manicura francesa"></figure>
+        <figure><img loading="lazy" src="img/unas-turquesa.jpg" alt="Uñas en turquesa"></figure>
+        <figure><img loading="lazy" src="img/ondas-negro.jpg" alt="Ondas en pelo oscuro"></figure>
       </div>
       <div class="row" style="justify-content:center;margin-top:36px"><a class="btn btn-line" href="https://www.instagram.com/raumarpeluqueria/" target="_blank" rel="noopener">Ver más en Instagram · @raumarpeluqueria</a></div>
     </div>
@@ -398,7 +401,7 @@ footer .bottom{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);paddi
     </div>
     <div class="bottom">
       <span>© 2026 Raumar Peluquería &amp; Estética</span>
-      <span>Fotografías de ambiente: Unsplash</span>
+      <span>Fotos de trabajos: Raumar · Ambiente: Unsplash</span>
     </div>
   </div>
 </footer>
